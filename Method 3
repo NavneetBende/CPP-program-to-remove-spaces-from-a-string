@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string s = "Pr e pi ns ta";
+    cout << "string with spaces is " << s << endl;
+
+    int l = s.length(); // storing the length of the string
+    int c= count(s.begin(), s.end(),' '); // counting the number of whitespaces
+
+    remove(s.begin(), s.end(),' '); // removing all the whitespaces
+    s.resize(l - c); // resizing the string to l-c
+
+    cout << "string without spaces is " << s << endl;
+    return 0;
+
+}
